@@ -1,6 +1,6 @@
 import sys
 from recipe_scrapers import scrape_me
-
+import io
 scraper = scrape_me('https://www.allrecipes.com/recipes/78/breakfast-and-brunch/', wild_mode=True)
 
 list = scraper.links()
@@ -29,9 +29,6 @@ for recipe in recipe_list:
     recipe_info_dict_copy = recipe_info_dict.copy()
     recipe_info_list.append(recipe_info_dict_copy)
 
-print(type(recipe_info_dict['title']))
-print(type(recipe_info_dict['total_time']))
-print(type(recipe_info_dict["yields"]))
-print(type(recipe_info_dict["ingredients"]))
-print(type(recipe_info_dict["image"]))
-print(type(recipe_info_dict["host"]))
+with io.open("breakfast_recipes.txt", "w", encoding="utf-8") as f:
+    f.write(str(recipe_info_list).replace("}, ", "};"))
+    f.close()
