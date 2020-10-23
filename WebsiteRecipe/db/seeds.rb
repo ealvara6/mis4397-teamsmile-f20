@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-file = File.open("breakfast_recipes.txt")
+file = File.open("breakfast.txt")
 breakfast_data = file.read
 file.close
-breakfast_array = breakfast_data.split("&")
+breakfast_array = breakfast_data.split("@")
 
 for breakfast in breakfast_array
     breakfast_info = breakfast.split('^')
@@ -28,7 +28,8 @@ end
 file = File.open("lunch.txt")
 lunch_data = file.read
 file.close
-lunch_array = lunch_data.split("&")
+lunch_array = lunch_data.split("@")
+lunch_array.pop
 
 for lunch in lunch_array
     lunch_info = lunch.split('^')
@@ -48,7 +49,7 @@ end
 file = File.open("dinner.txt")
 dinner_data = file.read
 file.close
-dinner_array = dinner_data.split("&")
+dinner_array = dinner_data.split("@")
 
 for dinner in dinner_array
     dinner_info = dinner.split('^')

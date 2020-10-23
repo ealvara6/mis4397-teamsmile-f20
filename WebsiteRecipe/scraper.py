@@ -38,6 +38,6 @@ for recipe_link in recipe_list:
         f.write(listToString(scraper.ingredients()) + '^')
         f.write(scraper.instructions() + '^')
         f.write(scraper.image() + '^')
-        f.write(scraper.host() + '&\n')
+        f.write(scraper.host() + '@')
 
 f.close
