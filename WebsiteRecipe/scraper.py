@@ -1,8 +1,7 @@
 import sys
 from recipe_scrapers import scrape_me
 import io
-scraper = scrape_me('https://www.allrecipes.com/recipes/78/breakfast-and-brunch/', wild_mode=True)
-
+scraper = scrape_me(sys.argv[1], wild_mode=True)
 list = scraper.links()
 
 copy = ""
@@ -14,21 +13,31 @@ for i in list:
             copy = recipe_link
             recipe_list.append(i['href'])
 
-recipe_info_list = []
-for recipe in recipe_list:
-    scraper = scrape_me(recipe)
-    recipe_info_dict = {
-        "title" : scraper.title(),
-        "total_time" : scraper.total_time(),
-        "yields" : scraper.total_time(),
-        "ingredients" : scraper.ingredients(),
-        "instructions" : scraper.instructions(),
-        "image" : scraper.image(),
-        "host" : scraper.host()
-        }
-    recipe_info_dict_copy = recipe_info_dict.copy()
-    recipe_info_list.append(recipe_info_dict_copy)
 
-with io.open("breakfast_recipes.txt", "w", encoding="utf-8") as f:
-    f.write(str(recipe_info_list).replace("}, ", "};"))
-    f.close()
+    def listToString(s):  
+    
+    # initialize an empty string 
+        str1 = ""  
+    
+    # traverse in the string   
+        for ele in s:  
+            str1 += ele   
+    
+    # return string   
+        return str1  
+
+
+
+for recipe_link in recipe_list:
+    scraper = scrape_me(recipe_link)
+
+    with io.open(sys.argv[2], "a", encoding="utf-8") as f:
+        f.write(scraper.title() + '^')
+        f.write(str(scraper.total_time()) + '^')
+        f.write(str(scraper.yields()) + '^')
+        f.write(listToString(scraper.ingredients()) + '^')
+        f.write(scraper.instructions() + '^')
+        f.write(scraper.image() + '^')
+        f.write(scraper.host() + '&\n')
+
+f.close

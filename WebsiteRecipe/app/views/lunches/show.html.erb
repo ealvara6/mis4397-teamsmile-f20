@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @lunch.title %>
+</p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @lunch.total_time %>
+</p>
+
+<p>
+  <strong>Yields:</strong>
+  <%= @lunch.yields %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @lunch.ingredients %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @lunch.instructions %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @lunch.image %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @lunch.host %>
+</p>
+
+<%= link_to 'Edit', edit_lunch_path(@lunch) %> |
+<%= link_to 'Back', lunches_path %>

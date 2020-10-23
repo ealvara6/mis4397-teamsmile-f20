@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Breakfasts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Total time</th>
+      <th>Yields</th>
+      <th>Ingredients</th>
+      <th>Instructions</th>
+      <th>Image</th>
+      <th>Host</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @breakfasts.each do |breakfast| %>
+      <tr>
+        <td><%= breakfast.title %></td>
+        <td><%= breakfast.total_time %></td>
+        <td><%= breakfast.yields %></td>
+        <td><%= breakfast.ingredients %></td>
+        <td><%= breakfast.instructions %></td>
+        <td><%= breakfast.image %></td>
+        <td><%= breakfast.host %></td>
+        <td><%= link_to 'Show', breakfast %></td>
+        <td><%= link_to 'Edit', edit_breakfast_path(breakfast) %></td>
+        <td><%= link_to 'Destroy', breakfast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Breakfast', new_breakfast_path %>

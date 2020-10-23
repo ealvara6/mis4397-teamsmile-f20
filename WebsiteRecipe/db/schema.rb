@@ -10,9 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_19_062241) do
+ActiveRecord::Schema.define(version: 2020_10_23_033405) do
 
-  create_table "breakfast_recipes", force: :cascade do |t|
+  create_table "breakfasts", force: :cascade do |t|
+    t.string "title"
+    t.integer "total_time"
+    t.integer "yields"
+    t.string "ingredients"
+    t.string "instructions"
+    t.string "image"
+    t.string "host"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "dinners", force: :cascade do |t|
+    t.string "title"
+    t.integer "total_time"
+    t.integer "yields"
+    t.string "ingredients"
+    t.string "instructions"
+    t.string "image"
+    t.string "host"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lunches", force: :cascade do |t|
+    t.string "title"
+    t.integer "total_time"
+    t.integer "yields"
+    t.string "ingredients"
+    t.string "instructions"
+    t.string "image"
+    t.string "host"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
