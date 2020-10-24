@@ -1,0 +1,52 @@
+<%= form_for(dinner) do |f| %>
+  <% if dinner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dinner.errors.count, "error") %> prohibited this dinner from being saved:</h2>
+
+      <ul>
+      <% dinner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :total_time %>
+    <%= f.number_field :total_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :yields %>
+    <%= f.number_field :yields %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instructions %>
+    <%= f.text_field :instructions %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :host %>
+    <%= f.text_field :host %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @breakfast.title %>
+</p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @breakfast.total_time %>
+</p>
+
+<p>
+  <strong>Yields:</strong>
+  <%= @breakfast.yields %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @breakfast.ingredients %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @breakfast.instructions %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @breakfast.image %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @breakfast.host %>
+</p>
+
+<%= link_to 'Edit', edit_breakfast_path(@breakfast) %> |
+<%= link_to 'Back', breakfasts_path %>
