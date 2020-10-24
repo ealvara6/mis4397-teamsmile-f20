@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- Image and text -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="https://image.freepik.com/free-vector/best-recipes-logo-with-yellow-pan_23-2147492924.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
         Recipes
@@ -43,12 +43,12 @@
       <% end %>
           <div class="col-sm-3">
             <div class="card-deck">
-            <div class="card h-100" style="width: 18rem;">
+            <div class="card h-100 text-white bg-secondary" style="width: 18rem;">
               <img src=<%= lunch.image %> class="card-img-top">
               <h5 class="card-title"><%= lunch.title %></h5>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Time: <%= lunch.total_time %> minutes</li>
-                <li class="list-group-item">Yields: <%= lunch.yields %> servings</li>
+                <li class="list-group-item bg-secondary">Time: <%= lunch.total_time %> minutes</li>
+                <li class="list-group-item bg-secondary">Yields: <%= lunch.yields %> servings</li>
               </ul>
             </div>
             </div>
