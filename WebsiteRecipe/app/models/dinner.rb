@@ -1,2 +1,0 @@
-class Dinner < ApplicationRecord
-end
