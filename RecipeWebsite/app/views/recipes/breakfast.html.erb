@@ -4,8 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Recipe</title>
+    <title>Breakfast</title>
   </head>
   <body>
     <!-- Image and text -->
@@ -15,23 +14,23 @@
       <% if counter.remainder(4) == 0 %>
         <div class="row">
       <% end %>
-          <div class="col-sm-3">
-            <div class="card-deck">
-              <div class="card text-white bg-secondary" style="width: 18rem;">
+      <div class="col-sm-3">
+        <div class="card-deck">
+            <div class="card text-white bg-secondary" style="width: 18rem;">
                 <img src=<%= recipe.image %> class="card-img-top">
                 <h5 class="card-title"><%= recipe.name %></h5>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-secondary">Time: <%= recipe.time %> minutes</li>
                   <li class="list-group-item bg-secondary">Yields: <%= recipe.yield %></li>
                 </ul>
-              </div>
             </div>
-          </div>
-          <% counter += 1 %>
-        <% if counter.remainder(4) == 0 %>
         </div>
-        <% end %>
+      </div>
+      <% counter += 1 %>
+      <% if counter.remainder(4) == 0 %>
+        </div>
       <% end %>
+     <% end %>
     </div>
   </body>
 </html>
