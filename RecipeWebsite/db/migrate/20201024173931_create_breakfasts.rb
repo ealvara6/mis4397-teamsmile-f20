@@ -3,7 +3,7 @@ class CreateBreakfasts < ActiveRecord::Migration[5.0]
     create_table :breakfasts do |t|
       t.string :title
       t.integer :total_time
-      t.integer :yields
+      t.string :yields
       t.string :ingredients
       t.string :instructions
       t.string :image

@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201024174022) do
+ActiveRecord::Schema.define(version: 20201026032016) do
 
   create_table "breakfasts", force: :cascade do |t|
     t.string   "title"
     t.integer  "total_time"
-    t.integer  "yields"
+    t.string   "yields"
     t.string   "ingredients"
     t.string   "instructions"
     t.string   "image"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20201024174022) do
   create_table "dinners", force: :cascade do |t|
     t.string   "title"
     t.integer  "total_time"
-    t.integer  "yields"
+    t.string   "yields"
     t.string   "ingredients"
     t.string   "instructions"
     t.string   "image"
@@ -39,11 +39,27 @@ ActiveRecord::Schema.define(version: 20201024174022) do
   create_table "lunches", force: :cascade do |t|
     t.string   "title"
     t.integer  "total_time"
-    t.integer  "yields"
+    t.string   "yields"
     t.string   "ingredients"
     t.string   "instructions"
     t.string   "image"
     t.string   "host"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "types"
+    t.string   "restrictions"
+    t.integer  "time"
+    t.string   "yield"
+    t.string   "ingredients"
+    t.string   "instructions"
+    t.string   "image"
+    t.string   "link"
+    t.string   "make"
+    t.string   "make_by"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

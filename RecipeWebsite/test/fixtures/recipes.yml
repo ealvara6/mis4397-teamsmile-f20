@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  types: MyString
+  restrictions: MyString
+  time: 1
+  yield: MyString
+  ingredients: MyString
+  instructions: MyString
+  image: MyString
+  link: MyString
+  make: MyString
+  make_by: MyString
+
+two:
+  name: MyString
+  types: MyString
+  restrictions: MyString
+  time: 1
+  yield: MyString
+  ingredients: MyString
+  instructions: MyString
+  image: MyString
+  link: MyString
+  make: MyString
+  make_by: MyString

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recipes
   resources :dinners
   resources :lunches
   resources :breakfasts

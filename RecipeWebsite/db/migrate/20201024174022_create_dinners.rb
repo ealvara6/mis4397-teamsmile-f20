@@ -3,7 +3,7 @@ class CreateDinners < ActiveRecord::Migration[5.0]
     create_table :dinners do |t|
       t.string :title
       t.integer :total_time
-      t.integer :yields
+      t.string :yields
       t.string :ingredients
       t.string :instructions
       t.string :image
