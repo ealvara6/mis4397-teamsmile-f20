@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  get 'contact_us/index'
+
+  get 'about_us/index'
+
   resources :recipes
   
-  
+  get '/contact_us', to: 'contact_us#index'
+  get '/about_us', to: 'about_us#index'
   get '/recipes/1000/breakfast', to: 'recipes#breakfast'
   get '/recipes/2000/lunch', to: 'recipes#lunch'
   get '/recipes/3000/dinner', to: 'recipes#dinner'
