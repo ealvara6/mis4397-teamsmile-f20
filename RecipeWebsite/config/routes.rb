@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  root 'main#index'
+  
+  get 'main/index'
+
   get 'contact_us/index'
 
   get 'about_us/index'
 
   resources :recipes
+  resources :find_recipe
   
   get '/contact_us', to: 'contact_us#index'
   get '/about_us', to: 'about_us#index'

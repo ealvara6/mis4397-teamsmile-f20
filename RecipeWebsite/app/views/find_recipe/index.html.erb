@@ -1,0 +1,180 @@
+<body>
+    <div class="container white_bg">
+        <h1>Ingredients</h1>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Dairy
+                </button>
+              </h2>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @dairy.each do |dairy| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= dairy %>" value="<%= dairy %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= dairy %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Vegetables
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @vegetables.each do |vegetable| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= vegetable %>" value="<%= vegetable %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= vegetable %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Fruits
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @fruits.each do |fruit| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= fruit %>" value="<%= fruit %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= fruit %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Baking & Rice
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @baking.each do |baking| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= baking %>" value="<%= baking %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= baking %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Sweeteners
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @sweeteners.each do |sweetener| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= sweetener %>" value="<%= sweetener %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= sweetener %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Spices
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @spices.each do |spice| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= spice %>" value="<%= spice %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= spice %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  Meats
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @meats.each do |meat| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= meat %>" value="<%= meat %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= meat %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingEight">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Fish
+                </button>
+              </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @fish.each do |fish| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= fish %>" value="<%= fish %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= fish %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingNine">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Seafood
+                </button>
+              </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+              <div class="card-body">
+                <% @seafood.each do |seafood| %>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="<%= seafood %>" value="<%= seafood %>">
+                      <label class="form-check-label" for="inlineCheckbox1"><%= seafood %></label>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top: 50px;">Search Recipe!</button>
+    </div>
+</body>
