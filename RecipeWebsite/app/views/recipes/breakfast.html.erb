@@ -17,12 +17,13 @@
       <div class="col-sm-3">
         <div class="card-deck">
             <div class="card text-white bg-secondary" style="width: 18rem;">
-                <img src=<%= recipe.image %> class="card-img-top">
+                <img src="<%= recipe.image %>" class="card-img-top">
                 <h5 class="card-title"><%= recipe.name %></h5>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-secondary">Time: <%= recipe.time %> minutes</li>
                   <li class="list-group-item bg-secondary">Yields: <%= recipe.yield %></li>
                 </ul>
+                <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
             </div>
         </div>
       </div>

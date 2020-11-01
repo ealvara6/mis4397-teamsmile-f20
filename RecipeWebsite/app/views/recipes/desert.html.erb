@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Recipe</title>
+    <title>Desert</title>
   </head>
   <body>
     <!-- Image and text -->
@@ -24,6 +24,7 @@
                   <li class="list-group-item bg-secondary">Time: <%= recipe.time %> minutes</li>
                   <li class="list-group-item bg-secondary">Yields: <%= recipe.yield %></li>
                 </ul>
+                <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
               </div>
             </div>
           </div>

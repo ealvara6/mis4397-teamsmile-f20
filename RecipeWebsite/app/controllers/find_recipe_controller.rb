@@ -2,14 +2,14 @@ require 'csv'
 class FindRecipeController < ApplicationController
     
     def index
-        @dairy = CSV.read("Dairy.csv")
-        @vegetables = CSV.read("Vegetables.csv")
-        @fruits = CSV.read("Fruits.csv")
-        @baking = CSV.read("Baking.csv")
-        @sweeteners = CSV.read("Sweeteners.csv")
-        @spices = CSV.read("Spices.csv")
-        @meats = CSV.read("Meats.csv")
-        @fish = CSV.read("Fish.csv")
-        @seafood = CSV.read("Seafood.csv")
+        @dairy = CSV.read("csv/Dairy.csv")
+        @vegetables = CSV.read("csv/Vegetables.csv")
+        @fruits = CSV.read("csv/Fruits.csv")
+        @baking = CSV.read("csv/Baking.csv")
+        @sweeteners = CSV.read("csv/Sweeteners.csv")
+        @spices = CSV.read("csv/Spices.csv")
+        @meats = CSV.read("csv/Meats.csv")
+        @fish = CSV.read("csv/Fish.csv")
+        @seafood = CSV.read("csv/Seafood.csv")
     end
 end

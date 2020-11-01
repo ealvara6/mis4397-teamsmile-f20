@@ -1,59 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @recipe.name %>
-</p>
-
-<p>
-  <strong>Types:</strong>
-  <%= @recipe.types %>
-</p>
-
-<p>
-  <strong>Restrictions:</strong>
-  <%= @recipe.restrictions %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @recipe.time %>
-</p>
-
-<p>
-  <strong>Yield:</strong>
-  <%= @recipe.yield %>
-</p>
-
-<p>
-  <strong>Ingredients:</strong>
-  <%= @recipe.ingredients %>
-</p>
-
-<p>
-  <strong>Instructions:</strong>
-  <%= @recipe.instructions %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @recipe.image %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @recipe.link %>
-</p>
-
-<p>
-  <strong>Make:</strong>
-  <%= @recipe.make %>
-</p>
-
-<p>
-  <strong>Make by:</strong>
-  <%= @recipe.make_by %>
-</p>
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+<div class="container white_bg">
+  <table class="table">
+    <tbody>
+      <tr>
+        <td colspan="2"><h1><%= @recipe.name %></h1></td>
+      </tr>
+      <tr>
+        <td><img src="<%= @recipe.image %>" width="300" height="300"</img></td>
+        <td>
+          <h3>Ingredients:</h3><%= @recipe.ingredients %><br>
+          <h3>Instructions:</h3><%= @recipe.instructions %><br>
+          <h5 style="display: inline;">Time: </h5><%= @recipe.time %> Minutes<br>
+          <h5 style="display: inline;">Yields: </h5><%= @recipe.yield %></br>
+          <a class="btn btn-primary text-white" style="margin-top: 15px;" href="<%= @recipe.link %>" role="button">Link to recipe website</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
