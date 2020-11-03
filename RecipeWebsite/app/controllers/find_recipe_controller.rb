@@ -12,4 +12,8 @@ class FindRecipeController < ApplicationController
         @fish = CSV.read("csv/Fish.csv")
         @seafood = CSV.read("csv/Seafood.csv")
     end
+    
+    def show
+        
+    end
 end
