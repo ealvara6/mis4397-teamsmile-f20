@@ -21,8 +21,8 @@
     background-position: center;
 }
 
-.white_bg 
+.bg_color 
 {
-    background-color: #F0F8FF;
+    background-color: #f5ddcb;
     padding: 3px; /*add this if you want a bit of space around the text*/
 }
