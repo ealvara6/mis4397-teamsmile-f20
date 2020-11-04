@@ -8,7 +8,7 @@
 
 require 'csv'
 
-recipe = CSV.read("recipe.csv")
+recipe = CSV.read("csv/recipe.csv")
 
 recipe.each do |recipe|
     Recipe.create(name: recipe[0], types: recipe[1], restrictions: recipe[2], time: recipe[3], yield: recipe[4], ingredients: recipe[5], instructions: recipe[6], image: recipe[7], link: recipe[8], make: recipe[9], make_by: recipe[10])
