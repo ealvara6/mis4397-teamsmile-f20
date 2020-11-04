@@ -1,38 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Desert</title>
-  </head>
-  <body>
     <!-- Image and text -->
     <div class="container">
-      <% counter = 4 %>
+      <div class="row recipe-items">
       <% @recipes.each do |recipe| %>
-      <% if counter.remainder(4) == 0 %>
-        <div class="row">
-      <% end %>
-          <div class="col-sm-3">
-            <div class="card-deck">
-              <div class="card text-white bg-secondary" style="width: 18rem;">
-                <img src=<%= recipe.image %> class="card-img-top">
-                <h5 class="card-title"><%= recipe.name %></h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item bg-secondary">Time: <%= recipe.time %> minutes</li>
-                  <li class="list-group-item bg-secondary">Yields: <%= recipe.yield %></li>
-                </ul>
-                <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
+        <div class="recipe-item  col-md-3">
+          <div class="card-deck">
+              <div class="card text-white bg-secondary">
+                  <img src="<%= recipe.image %>" class="card-img-top">
+                  <h5 class="card-title"><%= recipe.name %></h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-secondary">Time: <%= recipe.time %> minutes</li>
+                    <li class="list-group-item bg-secondary">Yields: <%= recipe.yield %></li>
+                  </ul>
+                  <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
               </div>
-            </div>
           </div>
-          <% counter += 1 %>
-        <% if counter.remainder(4) == 0 %>
         </div>
-        <% end %>
-      <% end %>
+       <% end %>
+      </div>
     </div>
-  </body>
-</html>
