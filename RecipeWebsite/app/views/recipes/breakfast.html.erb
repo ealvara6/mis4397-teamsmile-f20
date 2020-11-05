@@ -3,15 +3,25 @@
     <div class="container">
       <div class="row recipe-items">
       <% @recipes.each do |recipe| %>
-        <div class="recipe-item  col-md-3">
-          <div class="card-deck">
-              <div class="card text-white bg-secondary">
+        <div class="recipe-item  col-md-4">
+          <div class="card-deck card-text">
+              <div class="card">
                   <img src="<%= recipe.image %>" class="card-img-top">
-                  <h5 class="card-title"><%= recipe.name %></h5>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-secondary">Time: <%= recipe.time %> minutes</li>
-                    <li class="list-group-item bg-secondary">Yields: <%= recipe.yield %></li>
-                  </ul>
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-center"><%= recipe.name %></h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-5">
+                      <img src=<%= asset_path('timer.png') %>>
+                      <%= recipe.time %> Min.
+                    </div>
+                    <div class="col-7">
+                      <img src=<%= asset_path('yield.png') %>>
+                      <%= recipe.yield %>
+                    </div>
+                  </div>
                   <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
               </div>
           </div>
