@@ -1,30 +1,30 @@
-
-    <!-- Image and text -->
-    <div class="container">
+    <div class="container antique-white background">
       <div class="row recipe-items">
       <% @recipes.each do |recipe| %>
-        <div class="recipe-item  col-md-4">
-          <div class="card-deck card-text">
-              <div class="card">
+        <div class="recipe-item  col-md-4" style="padding: 25px;">
+          <!--<div class="card-deck card-text" style="padding: 15px;"> -->
+              <div class="card text-white">
                   <img src="<%= recipe.image %>" class="card-img-top">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-center"><%= recipe.name %></h5>
+                  <div class="container-fluid">
+                    <div class="row blue-munsell">
+                      <div class="col">
+                        <h5 class="card-title text-center"><%= recipe.name %></h5>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-5">
-                      <img src=<%= asset_path('timer.png') %>>
-                      <%= recipe.time %> Min.
-                    </div>
-                    <div class="col-7">
-                      <img src=<%= asset_path('yield.png') %>>
-                      <%= recipe.yield %>
+                    <div class="row middle-blue">
+                      <div class="col-5">
+                        <img src=<%= asset_path('timer.png') %>>
+                        <%= recipe.time %> Min.
+                      </div>
+                      <div class="col-7">
+                        <img src=<%= asset_path('yield.png') %>>
+                        <%= recipe.yield %>
+                      </div>
                     </div>
                   </div>
                   <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
               </div>
-          </div>
+          <!--</div>-->
         </div>
        <% end %>
       </div>
