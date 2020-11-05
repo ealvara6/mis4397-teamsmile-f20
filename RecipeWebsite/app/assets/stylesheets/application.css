@@ -13,16 +13,28 @@
  *= require_tree .
  *= require_self
  */
-
-.background {
-    background-image: url("menu.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
+.white {
+    background-color: white;
 }
 
-.bg_color 
-{
-    background-color: #f5ddcb;
-    padding: 3px; /*add this if you want a bit of space around the text*/
+.antique-white {
+    background-color: #ffe8d1ff;
+}
+
+.blue-munsell {
+    background-color: #568ea3ff;
+}
+
+.middle-blue {
+    background-color: #68c3d4ff;
+}
+
+.raw-umber {
+    background-color: #826251ff;
+}
+
+.background {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
 }

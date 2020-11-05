@@ -1,13 +1,12 @@
-<body>
-    <div class="container" style="background-color: #f5ddcb; margin-top: 25px;">
-        <h1>Ingredients</h1>
+    <div class="container background antique-white" style="margin-top: 25px;">
+        <span style="text-align: center;"><h1>Ingredients</h1></span>
         <div class="accordion" id="accordionExample">
         
           <div class="card">
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Dairy
+                  <img src=<%= asset_path('dairy.png') %>> Dairy
                 </button>
               </h2>
             </div>
@@ -27,7 +26,7 @@
             <div class="card-header" id="headingTwo">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Vegetables
+                  <img src=<%= asset_path('vegetable.png') %>> Vegetables
                 </button>
               </h2>
             </div>
@@ -47,7 +46,7 @@
             <div class="card-header" id="headingThree">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Fruits
+                  <img src=<%= asset_path('fruit.png') %>>Fruits
                 </button>
               </h2>
             </div>
@@ -67,7 +66,7 @@
             <div class="card-header" id="headingFour">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Baking & Rice
+                  <img src=<%= asset_path('baking.png') %>> Baking & Rice
                 </button>
               </h2>
             </div>
@@ -87,7 +86,7 @@
             <div class="card-header" id="headingFive">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  Sweeteners
+                  <img src=<%= asset_path('honey.png') %>> Sweeteners
                 </button>
               </h2>
             </div>
@@ -107,7 +106,7 @@
             <div class="card-header" id="headingSix">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  Spices
+                  <img src=<%= asset_path('spice.png') %>> Spices
                 </button>
               </h2>
             </div>
@@ -127,7 +126,7 @@
             <div class="card-header" id="headingSeven">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                  Meats
+                  <img src=<%= asset_path('meat.png') %>> Meats
                 </button>
               </h2>
             </div>
@@ -147,7 +146,7 @@
             <div class="card-header" id="headingEight">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                  Fish
+                  <img src=<%= asset_path('fish.png') %>> Fish
                 </button>
               </h2>
             </div>
@@ -167,7 +166,7 @@
             <div class="card-header" id="headingNine">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                  Seafood
+                  <img src=<%= asset_path('seafood.png') %>> Seafood
                 </button>
               </h2>
             </div>
@@ -185,4 +184,3 @@
         </div>
         <a type="button" href="/find_recipe/show" class="btn btn-primary btn-lg btn-block text-white" style="margin-top: 50px;">Search Recipe!</a>
     </div>
-</body>

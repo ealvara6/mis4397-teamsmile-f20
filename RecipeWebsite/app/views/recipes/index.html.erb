@@ -1,38 +1,31 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Recipe</title>
-  </head>
-  <body>
-    <!-- Image and text -->
-    <div class="container">
-      <% counter = 4 %>
+    <div class="container antique-white background">
+      <div class="row recipe-items">
       <% @recipes.each do |recipe| %>
-      <% if counter.remainder(4) == 0 %>
-        <div class="row">
-      <% end %>
-          <div class="col-sm-3">
-            <div class="card-deck">
-              <div class="card text-white bg-secondary" style="width: 18rem;">
-                <img src=<%= recipe.image %> class="card-img-top">
-                <h5 class="card-title"><%= recipe.name %></h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item bg-secondary">Time: <%= recipe.time %> minutes</li>
-                  <li class="list-group-item bg-secondary">Yields: <%= recipe.yield %></li>
-                </ul>
-                <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
+        <div class="recipe-item  col-md-4" style="padding: 25px;">
+          <!--<div class="card-deck card-text" style="padding: 15px;"> -->
+              <div class="card text-white">
+                  <img src="<%= recipe.image %>" class="card-img-top">
+                  <div class="container-fluid">
+                    <div class="row blue-munsell">
+                      <div class="col">
+                        <h5 class="card-title text-center"><%= recipe.name %></h5>
+                      </div>
+                    </div>
+                    <div class="row middle-blue">
+                      <div class="col-5">
+                        <img src=<%= asset_path('timer.png') %>>
+                        <%= recipe.time %> Min.
+                      </div>
+                      <div class="col-7">
+                        <img src=<%= asset_path('yield.png') %>>
+                        <%= recipe.yield %>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
               </div>
-            </div>
-          </div>
-          <% counter += 1 %>
-        <% if counter.remainder(4) == 0 %>
+          <!--</div>-->
         </div>
-        <% end %>
-      <% end %>
+       <% end %>
+      </div>
     </div>
-  </body>
-</html>
