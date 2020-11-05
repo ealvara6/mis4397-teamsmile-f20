@@ -21,11 +21,11 @@
     background-color: #ffe8d1ff;
 }
 
-.blue-munsell {
+.blue1 {
     background-color: #568ea3ff;
 }
 
-.middle-blue {
+.blue2 {
     background-color: #68c3d4ff;
 }
 
@@ -35,6 +35,12 @@
 
 .background {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 15px;
+    background-color: white;
+}
+
+.navbar {
+    background-color: #68c3d4;
 }
