@@ -72,6 +72,10 @@ class RecipesController < ApplicationController
   # GET /recipes/1/edit
   def edit
   end
+  
+  def toggle
+    @test = "hello"
+  end
 
   # POST /recipes
   # POST /recipes.json
@@ -123,4 +127,6 @@ class RecipesController < ApplicationController
     def recipe_params
       params.require(:recipe).permit(:name, :types, :restrictions, :time, :yield, :ingredients, :instructions, :image, :link, :make, :make_by)
     end
+    
+    helper_method :toggle
 end

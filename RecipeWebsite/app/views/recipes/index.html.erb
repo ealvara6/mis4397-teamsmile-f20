@@ -21,8 +21,15 @@
                         <%= recipe.yield %>
                       </div>
                     </div>
+                    <div class="row blue2">
+                      <div class="col">
+                        <img src=<%= asset_path('unfavorite.png') %>>
+                      </div>
+                      <div class="col"style="padding-top: 5px;">
+                        <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
+                      </div>
+                    </div>
                   </div>
-                  <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
               </div>
           <!--</div>-->
         </div>

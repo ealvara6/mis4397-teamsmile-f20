@@ -14,15 +14,22 @@
                     <div class="row blue2">
                       <div class="col-5">
                         <img src=<%= asset_path('timer.png') %>>
-                        <%= recipe.time %> Min.
+                        <%= recipe.time %> m
                       </div>
                       <div class="col-7">
                         <img src=<%= asset_path('yield.png') %>>
                         <%= recipe.yield %>
                       </div>
                     </div>
+                    <div class="row blue2">
+                      <div class="col">
+                        <img src=<%= asset_path('unfavorite.png') %>>
+                      </div>
+                      <div class="col"style="padding-top: 5px;">
+                        <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
+                      </div>
+                    </div>
                   </div>
-                  <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white blue1">Show Recipe</a>
               </div>
           <!--</div>-->
         </div>

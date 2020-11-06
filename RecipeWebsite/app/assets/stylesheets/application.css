@@ -44,3 +44,11 @@
 .navbar {
     background-color: #68c3d4;
 }
+
+.modal-header {
+    background-color: #68c3d4ff;
+}
+
+.modal-body {
+    background-color: #ffe8d1ff;
+}
