@@ -52,3 +52,10 @@
 .modal-body {
     background-color: #ffe8d1ff;
 }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #68c3d4;
+  color: white;
+}
