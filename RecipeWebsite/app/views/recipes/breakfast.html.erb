@@ -1,32 +1,29 @@
-    <div class="container background">
+    <div class="container background ">
       <div class="row recipe-items">
       <% @recipes.each do |recipe| %>
         <div class="recipe-item  col-md-4" style="padding: 25px;">
           <!--<div class="card-deck card-text" style="padding: 15px;"> -->
-              <div class="card text-white">
-                  <img src="<%= recipe.image %>" class="card-img-top">
+              <div class="card">
+                  <img src="<%= recipe.image %>" height = 300px class="card-img-top">
                   <div class="container-fluid">
-                    <div class="row blue1">
+                    <div class="row white">
                       <div class="col">
-                        <h5 class="card-title text-center"><%= recipe.name %></h5>
+                        <h5 class="card-title text-center text-info" ><%= recipe.name %></h5>
                       </div>
                     </div>
-                    <div class="row blue2">
+                    <div class="row blue2 text-white">
                       <div class="col-5">
-                        <img src=<%= asset_path('timer.png') %>>
+                        <img src=<%= asset_path('timer.png' ) %> width = 35px>
                         <%= recipe.time %> m
                       </div>
                       <div class="col-7">
-                        <img src=<%= asset_path('yield.png') %>>
+                        <img src=<%= asset_path('yield.png') %> width = 35px>
                         <%= recipe.yield %>
                       </div>
                     </div>
                     <div class="row blue2">
-                      <div class="col">
-                        <img src=<%= asset_path('unfavorite.png') %>>
-                      </div>
-                      <div class="col"style="padding-top: 5px;">
-                        <a href="/recipes/<%= recipe.id %>" class="btn btn-primary text-white">Show Recipe</a>
+                      <div class="col text-center" style="padding-top: 5px; padding-bottom: 5px;">
+                        <a href="/recipes/<%= recipe.id %>" class="btn btn-outline-light" > Show Recipe</a>
                       </div>
                     </div>
                   </div>

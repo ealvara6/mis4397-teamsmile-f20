@@ -17,20 +17,28 @@
     background-color: white;
 }
 
-.antique-white {
-    background-color: #ffe8d1ff;
+.antique_white {
+    background-color: #FFE8DCff;
 }
 
 .blue1 {
-    background-color: #568ea3ff;
+    background-color: #12DBE6ff;
 }
 
 .blue2 {
-    background-color: #68c3d4ff;
+    background-color: #0EA5ADff;
 }
 
-.raw-umber {
-    background-color: #826251ff;
+.blue3 {
+    background-color: #0B7F85ff;
+}
+
+.brown1 {
+    background-color: #C29378ff;
+}
+
+.brown2 {
+    background-color: #4F3C31ff;
 }
 
 .background {
@@ -38,17 +46,17 @@
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 15px;
-    background-color: white;
+    background-color: #FFE8DCff;
 }
 
 .navbar {
-    background-color: #68c3d4;
+    background-color: #0B7F85ff;
 }
 
 .modal-header {
-    background-color: #68c3d4ff;
+    background-color: #10B3BDff;
 }
 
 .modal-body {
-    background-color: #ffe8d1ff;
+    background-color: #10B3BDff;
 }
