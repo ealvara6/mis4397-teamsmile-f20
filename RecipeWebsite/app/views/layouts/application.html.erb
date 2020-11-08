@@ -14,13 +14,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   </head>
-  <body class="antique-white">
+  <body class="brown2">
     
     
     <div class="container-fluid">
+<<<<<<< HEAD
        <nav class="row navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="/">
             <img src= <%= asset_path('Logo-NB.png') %> height="45">
+=======
+       <nav class="row navbar navbar-expand-lg navbar-dark ">
+          <a class="navbar-brand">
+            <img src= <%= asset_path('Logo.png') %> height="45">
+>>>>>>> f94e8aa8cc3f705abb09d2d429894a843aa6c7ae
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,10 +35,10 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link text-white" href="/"  >Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Menu
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -45,10 +51,10 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/find_recipe">Fridge</a>
+                <a class="nav-link text-white" href="/find_recipe">Fridge</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about_us">About Us</a>
+                <a class="nav-link text-white" href="/about_us">About Us</a>
               </li>
             </ul>
             <div class="">
@@ -63,7 +69,7 @@
                   </div>
                 </div>
               <% else %>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#login">
                   Login
                 </button>
                 <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLable" aria-hidden="true">
@@ -103,7 +109,7 @@
                   </div>
                 </div>
                 
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#signUp">
                   Sign Up
                 </button>
                 <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="loginLable" aria-hidden="true">

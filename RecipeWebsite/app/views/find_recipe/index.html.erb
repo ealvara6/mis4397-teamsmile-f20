@@ -6,7 +6,7 @@
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <img src=<%= asset_path('dairy.png') %>> Dairy
+                  <img src=<%= asset_path('dairy.png') %> width = 35px> Dairy
                 </button>
               </h2>
             </div>
@@ -15,7 +15,7 @@
                 <% @dairy.each do |dairy| %>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="<%= dairy %>" value="<%= dairy %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= dairy %></label>
+                      <label class="form-check-output" for="inlineCheckbox1"><%= dairy %></label>
                     </div>
                 <% end %>
               </div>
@@ -26,7 +26,7 @@
             <div class="card-header" id="headingTwo">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <img src=<%= asset_path('vegetable.png') %>> Vegetables
+                  <img src=<%= asset_path('vegetable.png') %> width = 35px> Vegetables
                 </button>
               </h2>
             </div>
@@ -46,7 +46,7 @@
             <div class="card-header" id="headingThree">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <img src=<%= asset_path('fruit.png') %>>Fruits
+                  <img src=<%= asset_path('fruit.png') %> width = 35px>Fruits
                 </button>
               </h2>
             </div>
@@ -66,7 +66,7 @@
             <div class="card-header" id="headingFour">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <img src=<%= asset_path('baking.png') %>> Baking & Rice
+                  <img src=<%= asset_path('baking.png') %> width = 35px> Baking & Rice
                 </button>
               </h2>
             </div>
@@ -86,7 +86,7 @@
             <div class="card-header" id="headingFive">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  <img src=<%= asset_path('honey.png') %>> Sweeteners
+                  <img src=<%= asset_path('sugar.png') %> width = 35px> Sweeteners
                 </button>
               </h2>
             </div>
@@ -106,7 +106,7 @@
             <div class="card-header" id="headingSix">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  <img src=<%= asset_path('spice.png') %>> Spices
+                  <img src=<%= asset_path('spice.png') %> width = 35px> Spices
                 </button>
               </h2>
             </div>
@@ -126,7 +126,7 @@
             <div class="card-header" id="headingSeven">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                  <img src=<%= asset_path('meat.png') %>> Meats
+                  <img src=<%= asset_path('meat.png') %> width = 35px> Meats
                 </button>
               </h2>
             </div>
@@ -146,7 +146,7 @@
             <div class="card-header" id="headingEight">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                  <img src=<%= asset_path('fish.png') %>> Fish
+                  <img src=<%= asset_path('fish.png') %> width = 35px> Fish
                 </button>
               </h2>
             </div>
@@ -160,13 +160,13 @@
                 <% end %>
               </div>
             </div>
-          </div>
+          </div> 
           
           <div class="card">
             <div class="card-header" id="headingNine">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                  <img src=<%= asset_path('seafood.png') %>> Seafood
+                  <img src=<%= asset_path('seafood.png') %> width = 35px> Seafood
                 </button>
               </h2>
             </div>
@@ -182,5 +182,5 @@
             </div>
           </div>
         </div>
-        <a type="button" href="/find_recipe/show" class="btn btn-primary btn-lg btn-block text-white" style="margin-top: 50px;">Search Recipe!</a>
+        <a type="button" href="/find_recipe/show" class="btn btn-outline-dark btn-lg btn-block" style="margin-top: 50px;">Search Recipe!</a>
     </div>
