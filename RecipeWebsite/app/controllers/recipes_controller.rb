@@ -10,6 +10,9 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @instructions_array = @recipe.instructions.split('.')
+    @ingredients_array = @recipe.ingredients.tr('[','').tr(']','').tr("'",'').split(',')
+    
   end
   
   def breakfast

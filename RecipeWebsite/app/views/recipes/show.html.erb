@@ -7,8 +7,18 @@
       <tr>
         <td><img src="<%= @recipe.image %>" width="300" height="300"</img></td>
         <td>
-          <h3>Ingredients:</h3><%= @recipe.ingredients %><br>
-          <h3>Instructions:</h3><%= @recipe.instructions %><br>
+          <h3>Ingredients:</h3>
+          <ul>
+          <% @ingredients_array.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <% @instructions_array.each do |step| %>
+            <li><%= step %></li>
+            <% end %>
+          </ol>
           <h5 style="display: inline;">Time: </h5><%= @recipe.time %> Minutes<br>
           <h5 style="display: inline;">Yields: </h5><%= @recipe.yield %></br>
           <a class="btn btn-dark" style="margin-top: 15px;" href="<%= @recipe.link %>" role="button">Link to recipe website</a>
