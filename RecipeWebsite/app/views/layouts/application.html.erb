@@ -18,11 +18,6 @@
     
     
     <div class="container-fluid">
-
-       <nav class="row navbar navbar-expand-lg navbar-dark">
-          <!--<a class="navbar-brand" href="/">-->
-          <!--  <img src= <%= asset_path('Logo-NB.png') %> height="45">-->
-
        <nav class="row navbar navbar-expand-lg navbar-dark ">
           <a class="navbar-brand" href="/">
             <img src= <%= asset_path('Logo.png') %> height="45">
@@ -57,7 +52,8 @@
                 <a class="nav-link text-white" href="/about_us">About Us</a>
               </li>
             </ul>
-            <div class="">
+            </div>
+            <div class="ml-auto">
               <% if user_signed_in? %>
                 <div class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -149,7 +145,6 @@
                 
               <% end %>
             </div>
-          </div>
         </nav>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
