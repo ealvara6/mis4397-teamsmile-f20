@@ -1,23 +1,92 @@
 
     <main role="main" class="container background antique_white" style="margin-top: 20px;">
-      <div class="starter-template">
-        <h1> About us </h1>
-        <p class="lead">
-          Nothing is puts a frown on someones face more than being hungry, finding a good recipe online, then finding out that you dont have any of the ingredients.
-          For too many years the people we love have been frowing because they were hungry, and we must put a stop to that. This is why we came up with Smile Recipes.
-          With our ability to see what you have in your fridge, you will only see recipes that have the foods you already have.
-          You can also choose a specific food that you enjoy to see if there are any recipes that fit what you are craving.
-          In addition, we have our dietary restrictions feature so if you have certain restrictions on what you can eat, you dont have to look through the whole recipe to see if they are right for you
-          Because we are very new, we do not have many recipes so if you happen to have a recipe you love you can add it to our collection!
-          <h5><b>Lead Back End Developer:</b> Eduardo Alvarado</h5> 
-        </p><p>
-          <h5><b>Lead Front End Developer:</b> Faryal Mahmood</h5> 
-        </p><p>
-          <h5><b>Project Manager:</b> Tanisha Patel</h5> 
-     
-     
-        </p>
-    </main>
+        <div class="starter-template">
+            <h1> About us </h1>
+            <h3 class="lead">
+            Nothing is puts a frown on someones face more than being hungry, finding a good recipe online, then finding out that you dont have any of the ingredients.
+              For too many years the people we love have been frowing because they were hungry, and we must put a stop to that. This is why we came up with Smile Recipes.
+              With our ability to see what you have in your fridge, you will only see recipes that have the foods you already have.
+              You can also choose a specific food that you enjoy to see if there are any recipes that fit what you are craving.
+              In addition, we have our dietary restrictions feature so if you have certain restrictions on what you can eat, you dont have to look through the whole recipe to see if they are right for you
+              Because we are very new, we do not have many recipes so if you happen to have a recipe you love you can add it to our collection!
+            <br>
+            <br>
+            </h3>
+            <h2>Our Team</h2>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" data-interval="20000">
+                <div class="carousel-item active">
+                    <div class="card mb-3 bg-dark text-light border-dark" style="max-width: 100%; max-height:100%" border-radius="15px">
+                        <div class="row no-gutters">
+                            <div class="col-md-8">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Eduardo Alvarado</h3>
+                                    <h6 class="card-text text-muted">Lead Back End Developer</h6>
+                                    <p class="card-text">
+                                        **INPUT YOUR LITTLE BLURB**
+                                    </p>
+                                    <p class="card text bg-light text-dark"> Find me on Social Media: <a href="https://www..." class="badge badge-info">...</a></p>                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src=<%= asset_path('Eduardo.png') %> class="card-img rounded border-dark">
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="30000">
+                    <div class="card mb-3 bg-dark text-light border-dark" style="max-width: 100%;">
+                        <div class="row no-gutters">
+                            <div class="col-md-8">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Faryal Mahmood</h3>
+                                    <h6 class="card-text text-muted">Lead Front End Developer</h6>
+                                    <p class="card-text">
+                                        **INPUT YOUR LITTLE BLURB**
+                                    </p>
+                                    <p class="card text bg-light text-dark"> Find me on Social Media: <a href="https://www...." class="badge badge-info">...</a></p>                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src=<%= asset_path('Faryal.png') %> class="card-img rounded border-dark" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="30000">
+                    <div class="card mb-3 bg-dark text-light border-dark"  style="max-width: 100%;">
+                        <div class="row no-gutters">
+                            <div class="col-md-8 text-center" >
+                                <div class="card-body">
+                                    <h3 class="card-title">Tanisha Patel</h3>
+                                    <h6 class="card-text text-muted">Project Manager</h6>
+                                    <p class="card-text">
+                                        After graduating from an Early College High School with an Associates Degree in 2018, I decided to continue my path to higher education.
+                                        I am now in my third year at university and will be accepting my Bachelor’s in the Spring of 2021 with a double major in Marketing and MIS.
+                                        This is a project for one of my MIS courses where we are working on creating our own application using our prior knowledge and the critical thinking skills that we have learned.
+                                    </p>
+                                    <p class="card text bg-light text-dark"> Find me on Social Media: 
+                                        <a href="https://www.linkedin.com/in/tanishaspatel/" class="badge badge-info border-dark">LinkedIn : @TanishaSPatel</a>
+                                        <a href="https://https://twitter.com/tanishaspatel4" class="badge badge-info border-dark">Twitter : @TanishaSPatel4</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src=<%= asset_path('Tanisha.png') %> class="card-img rounded border-dark">
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+</main>
        
     
 <section class="mb-4 container background antique_white"  style="">

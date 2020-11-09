@@ -153,14 +153,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <%= yield %>
-    <footer style="padding-top: 48px; padding-bottom: 48px;">
+    <footer style="padding-top: 20px;">
+
+      <img src= <%= asset_path('Logo.png') %> height="50" align="left">
       <div class="links">
-        <a href="/about_us">About Us</a><br>
-        <a href="/about_us">Contact Us</a>
-      </div>
-      <img src= <%= asset_path('Logo.png') %> height="45" align="left">
-      <br><br>
-      <h6 align="left">Copyright © 2020 SmileRecipes.com</h6>
+        <a href="/about_us" class="text-white">About Us</a><br>
+        <a href="/about_us" class="text-white">Contact Us</a>
+      </div>      
+      <h6 align="left" class="text-light">Copyright © 2020 SmileRecipes.com</h6>
       
       
     </footer>
