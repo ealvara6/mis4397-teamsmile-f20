@@ -17,14 +17,15 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
+    <% recipes = @recipes.sample(3) %>
     <div class="carousel-item active">
-      <%= image_tag ("main.jpeg"), width:'1100px', height:'500px' %>
+      <a href="recipes/<%= recipes[0].id %>"><img src=<%= recipes[0].image %> style="width:500px;height:500px;"</a>
     </div>
     <div class="carousel-item">
-    <%= image_tag ("main2.jpeg"), width:'1100px', height:'500px' %>
+      <a href="recipes/<%= recipes[1].id %>"><img src=<%= recipes[1].image %> style="width:500px;height:500px;"</a>
     </div>
     <div class="carousel-item">
-      <%= image_tag ("main3.jpeg"), width:'1100px', height:'500px' %>
+      <a href="recipes/<%= recipes[2].id %>"><img src=<%= recipes[2].image %> style="width:500px;height:500px;"</a>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
