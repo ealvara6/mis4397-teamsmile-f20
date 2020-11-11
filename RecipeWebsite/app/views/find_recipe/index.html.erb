@@ -1,186 +1,30 @@
-    <div class="container background antique-white" style="margin-top: 25px;">
-        <span style="text-align: center;"><h1>Ingredients</h1></span>
-        <div class="accordion" id="accordionExample">
-        
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <img src=<%= asset_path('dairy.png') %> width = 35px> Dairy
-                </button>
-              </h2>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @dairy.each do |dairy| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= dairy %>" value="<%= dairy %>">
-                      <label class="form-check-output" for="inlineCheckbox1"><%= dairy[0] %></label>
-                    </div>
-                <% end %>
-              </div>
-            </div>
+<div class="container background antique-white" style="margin-top: 25px;">
+  <h1 class="text-center">What's In Your Fridge?</h1>
+  
+  
+  <div class="accordiion" id="ingredients">
+    <%= form_tag('/find_recipe/query', :method => :get) do %>
+      <% @ingredients.each_with_index do |ingredient, index| %>
+        <div class="card">
+          <div class="card-header" id="heading<%= index %>">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+                <img src="<%= asset_path(@images[index]) %>"> <%= @ingredients_name[index] %>
+              </button>
+            </h2>
           </div>
           
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <img src=<%= asset_path('vegetable.png') %> width = 35px> Vegetables
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @vegetables.each do |vegetable| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= vegetable %>" value="<%= vegetable %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= vegetable[0] %></label>
-                    </div>
+          <div id="collapse<%= index %>" class="collapse" aria-labelledby="heading<%= index %>" data-parent="#ingredients">
+            <div class="card-body">
+                <% ingredient.each do |i| %>
+                  <%= check_box_tag(:ingredient, i[0]) %>
+                  <%= label_tag(:ingredient, i[0]) %>
                 <% end %>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <img src=<%= asset_path('fruit.png') %> width = 35px>Fruits
-                </button>
-              </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @fruits.each do |fruit| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= fruit %>" value="<%= fruit %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= fruit[0] %></label>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingFour">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <img src=<%= asset_path('baking.png') %> width = 35px> Baking & Rice
-                </button>
-              </h2>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @baking.each do |baking| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= baking %>" value="<%= baking %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= baking[0] %></label>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingFive">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  <img src=<%= asset_path('sugar.png') %> width = 35px> Sweeteners
-                </button>
-              </h2>
-            </div>
-            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @sweeteners.each do |sweetener| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= sweetener %>" value="<%= sweetener %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= sweetener[0] %></label>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingSix">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  <img src=<%= asset_path('spice.png') %> width = 35px> Spices
-                </button>
-              </h2>
-            </div>
-            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @spices.each do |spice| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= spice %>" value="<%= spice %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= spice[0] %></label>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingSeven">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                  <img src=<%= asset_path('meat.png') %> width = 35px> Meats
-                </button>
-              </h2>
-            </div>
-            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @meats.each do |meat| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= meat %>" value="<%= meat %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= meat[0] %></label>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingEight">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                  <img src=<%= asset_path('fish.png') %> width = 35px> Fish
-                </button>
-              </h2>
-            </div>
-            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @fish.each do |fish| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= fish %>" value="<%= fish %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= fish[0] %></label>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          </div> 
-          
-          <div class="card">
-            <div class="card-header" id="headingNine">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                  <img src=<%= asset_path('seafood.png') %> width = 35px> Seafood
-                </button>
-              </h2>
-            </div>
-            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
-              <div class="card-body">
-                <% @seafood.each do |seafood| %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="<%= seafood %>" value="<%= seafood %>">
-                      <label class="form-check-label" for="inlineCheckbox1"><%= seafood[0] %></label>
-                    </div>
-                <% end %>
-              </div>
             </div>
           </div>
         </div>
-        <a type="button" href="/find_recipe/show" class="btn btn-outline-dark btn-lg btn-block" style="margin-top: 50px;">Search Recipe!</a>
+      <% end %>
     </div>
+    <%= submit_tag("Search", :class => "btn btn-primary btn-lg", :style => "width: 100%; margin-top: 20px;") %>
+    <% end %>
+</div>

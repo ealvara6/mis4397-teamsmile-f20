@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :recipes
   resources :find_recipe
   
+  
+  get '/find_recipe/query', to: 'find_recipe#query'
   get '/contact_us', to: 'contact_us#index'
   get '/about_us', to: 'about_us#index'
   get '/recipes/1000/breakfast', to: 'recipes#breakfast'
