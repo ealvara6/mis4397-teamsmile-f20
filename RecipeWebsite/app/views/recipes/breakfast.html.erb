@@ -11,7 +11,7 @@
                         <h5 class="card-title text-center text-info" ><%= recipe.name %></h5>
                       </div>
                     </div>
-                    <div class="row blue2 text-white">
+                    <div class="row blue2 text-white h-50">
                       <div class="col-5">
                         <img src=<%= asset_path('timer.png' ) %> width = 35px>
                         <%= recipe.time %> m
@@ -23,7 +23,7 @@
                     </div>
                     <div class="row blue2">
                       <div class="col text-center" style="padding-top: 5px; padding-bottom: 5px;">
-                        <a href="/recipes/<%= recipe.id %>" class="btn btn-outline-light" > Show Recipe</a>
+                        <a href="/recipes/<%= recipe.id %>" class="btn btn-outline-light" background> Show Recipe</a>
                       </div>
                     </div>
                   </div>
