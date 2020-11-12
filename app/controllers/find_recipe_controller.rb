@@ -20,6 +20,6 @@ class FindRecipeController < ApplicationController
     
     
     def show
-        @recipes = Recipe.where("name like ?", "%#{params[:ingredient]}%")
+        @recipes = Recipe.where('ingredients LIKE ?', "%#{params[:ingredient]}")
     end
 end
