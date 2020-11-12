@@ -1,39 +1,82 @@
 <div class="container">
  
     <!--<h1 class="display-1"  style="color:white; font-family:Brush Script MT;">Smile Recipes </h1>-->
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <% recipes = @recipes.sample(3) %>
-        <div class="carousel-item active">
-          <a href="recipes/<%= recipes[0].id %>"><img src=<%= recipes[0].image %> style="width:500px;height:500px;"</a>
+    <div class="background" id="intro">
+        <h2>Check out some of our featured recipes here! </h2>
+        <h5>Click the arrows to scroll through some of our top recipes and click on any that seem interesting!.</h5>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <% recipes = @recipes.sample(9) %>
+          <div class="carousel-item active">
+            <div class="card-group">
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[0].id %>"><img class="card-img" src=<%= recipes[0].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[0].name %> </h5>
+            </div>
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[1].id %>"><img class="card-img" src=<%= recipes[1].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[1].name %> </h5>
+            </div> 
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[2].id %>"><img class="card-img" src=<%= recipes[2].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[2].name %> </h5>
+            </div>             
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-group">
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[3].id %>"><img class="card-img" src=<%= recipes[3].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[3].name %> </h5>
+            </div>
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[4].id %>"><img class="card-img" src=<%= recipes[4].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[4].name %> </h5>
+            </div> 
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[5].id %>"><img class="card-img" src=<%= recipes[5].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[5].name %> </h5>
+            </div>             
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-group">
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[6].id %>"><img class="card-img" src=<%= recipes[6].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[6].name %> </h5>
+            </div>
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[7].id %>"><img class="card-img" src=<%= recipes[7].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[7].name %> </h5>
+            </div> 
+            <div class="card bg-dark text-white">
+              <a href="recipes/<%= recipes[8].id %>"><img class="card-img" src=<%= recipes[8].image %> style="width:350px;height:350px;">
+                <h5 class="card-title text-white text-center"><%= recipes[8].name %> </h5>
+            </div>             
+          </div>
+          </div>          
+  
         </div>
-        <div class="carousel-item">
-          <a href="recipes/<%= recipes[1].id %>"><img src=<%= recipes[1].image %> style="width:500px;height:500px;"</a>
-        </div>
-        <div class="carousel-item">
-          <a href="recipes/<%= recipes[2].id %>"><img src=<%= recipes[2].image %> style="width:500px;height:500px;"</a>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
-    <br>
+
     <div class="background" id="intro">
         <h2 >Don't know what to cook with what you have at home? </h2>
-        <h3>Smile Recipe's is here to help! To find recipe's tailored to what you've got at home, click on "What's in your fridge" and input the ingredients
-        you want to use. Willing to take a grocery trip? Go to our Recipe's tabs that has hundreds of recipes that cater to different diets and tastes.</h3>
+        <h5>Smile Recipe's is here to help! To find recipe's tailored to what you've got at home, click on "What's in your fridge" and input the ingredients
+        you want to use. Willing to take a grocery trip? Go to our Recipe's tabs that has hundreds of recipes that cater to different diets and tastes.</h5>
     </div>
     <a id="first" class="btn btn-primary" style="margin: 4px 2px;"  href="find_recipe">What's in your fridge?</a>
 </div>
