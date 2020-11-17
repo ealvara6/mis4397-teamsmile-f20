@@ -20,6 +20,6 @@ class FindRecipeController < ApplicationController
     
     
     def show
-        @recipes = Recipe.where('ingredients LIKE ?', "%#{params[:ingredient]}")
+         @recipes = Recipe.where("to_tsvector('english',name || ' ') @@ to_tsquery(?)", params[:ingredient])
     end
 end
