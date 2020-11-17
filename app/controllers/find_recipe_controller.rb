@@ -16,6 +16,7 @@ class FindRecipeController < ApplicationController
         @ingredients = [dairy, vegetables, fruits, baking, sweeteners, spices, meats, fish, seafood]
         @ingredients_name = ["Dairy", "Vegetables", "Fruits", "Baking", "Sweeteners", "Spices", "Meats", "Fish", "Seafood"]
         @images = ["dairy.png","vegetable.png","fruit.png","baking.png","sugar.png","spice.png","meat.png","fish.png","seafood.png"]
+        @restrictions = ["No Restrictions", "Vegetarian", "Vegan", "Dairy Free", "Gluten Free"]
     end
     
     
