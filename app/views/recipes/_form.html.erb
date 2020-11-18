@@ -12,37 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label : "Recipe Name" %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :types %>
+    <%= f.label : "Type Of Meal" %>
     <%= f.text_field :types %>
   </div>
 
   <div class="field">
-    <%= f.label :restrictions %>
+    <%= f.label :"Dietary Restrictions" %>
     <%= f.text_field :restrictions %>
   </div>
 
   <div class="field">
-    <%= f.label :time %>
+    <%= f.label :"How Long Does it Take To Make?" %>
     <%= f.number_field :time %>
   </div>
 
   <div class="field">
-    <%= f.label :yield %>
+    <%= f.label : "How Servings Come Out Of This?" %>
     <%= f.text_field :yield %>
   </div>
 
   <div class="field">
-    <%= f.label :ingredients %>
+    <%= f.label :"What are the ingredients? Please use This format: Amount Ingredient, Amount Ingredient..." %>
     <%= f.text_field :ingredients %>
   </div>
 
   <div class="field">
-    <%= f.label :instructions %>
+    <%= f.label :"What are the instructions for this recipe? Please separate each step with commas" %>
     <%= f.text_field :instructions %>
   </div>
 
@@ -52,18 +52,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :link %>
+    <%= f.label :"If you have found this recipe from another website, please link it here" %>
     <%= f.text_field :link %>
-  </div>
-
-  <div class="field">
-    <%= f.label :make %>
-    <%= f.text_field :make %>
-  </div>
-
-  <div class="field">
-    <%= f.label :make_by %>
-    <%= f.text_field :make_by %>
   </div>
 
   <div class="actions">
