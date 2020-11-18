@@ -10,53 +10,60 @@
       </ul>
     </div>
   <% end %>
-
+<div class="container background">
+  <h2>Add a New Recipe</h2>
   <div class="field">
-    <%= f.label : "Recipe Name" %>
+    <%= f.label :name, "What is the name of this recipe?" %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label : "Type Of Meal" %>
+    <%= f.label :types, "What type ofmMeal does this recipe create? Breakfast, Lunch, Dinner, Snack, or Dessert" %>
     <%= f.text_field :types %>
   </div>
 
   <div class="field">
-    <%= f.label :"Dietary Restrictions" %>
+    <%= f.label :restrictions,"Are there any dietary restrictions this recipe follows? Type 'xx' for no, 'vt' for vegetarian, 'v' for vegan, 'df' for dairy free, and 'gf' for gluten free" %>
     <%= f.text_field :restrictions %>
   </div>
 
   <div class="field">
-    <%= f.label :"How Long Does it Take To Make?" %>
+    <%= f.label :time,"How long dos this recipe take to make?" %>
     <%= f.number_field :time %>
   </div>
 
   <div class="field">
-    <%= f.label : "How Servings Come Out Of This?" %>
+    <%= f.label :yield, "How many servings does this recipe make?" %>
     <%= f.text_field :yield %>
   </div>
 
   <div class="field">
-    <%= f.label :"What are the ingredients? Please use This format: Amount Ingredient, Amount Ingredient..." %>
+    <%= f.label :ingredients,"What are the ingredients? Please use this format: Amount Ingredient, Amount Ingredient..." %>
     <%= f.text_field :ingredients %>
   </div>
 
   <div class="field">
-    <%= f.label :"What are the instructions for this recipe? Please separate each step with commas" %>
+    <%= f.label :instructions,"What are the instructions for this recipe? Please separate each step a comma" %>
     <%= f.text_field :instructions %>
   </div>
 
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :image,"Please paste a link to an image of the recipe here" %>
     <%= f.text_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :"If you have found this recipe from another website, please link it here" %>
+    <%= f.label :link,"If you have found this recipe from another website, please link it here" %>
     <%= f.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= f.label :blurb,"Add a short story or little blurb about your recipe here!" %>
+    <%= f.text_field :blurb %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
