@@ -13,47 +13,47 @@
 <div class="container background">
   <h2>Add a New Recipe</h2>
   <div class="field">
-    <%= f.label :name, "What is the name of this recipe?" %>
+    <%= f.label :name, "What is the name of this recipe?\n" %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :types, "What type ofmMeal does this recipe create? Breakfast, Lunch, Dinner, Snack, or Dessert" %>
+    <%= f.label :types, "What type ofmMeal does this recipe create?\n Please choose between Breakfast, Lunch, Dinner, Snack, or Dessert\n" %>
     <%= f.text_field :types %>
   </div>
 
   <div class="field">
-    <%= f.label :restrictions,"Are there any dietary restrictions this recipe follows? Type 'xx' for no, 'vt' for vegetarian, 'v' for vegan, 'df' for dairy free, and 'gf' for gluten free" %>
+    <%= f.label :restrictions,"Are there any dietary restrictions this recipe follows?\nType 'xx' for none, 'vt' for vegetarian, 'v' for vegan, 'df' for dairy free, and 'gf' for gluten free\n" %>
     <%= f.text_field :restrictions %>
   </div>
 
   <div class="field">
-    <%= f.label :time,"How long dos this recipe take to make?" %>
+    <%= f.label :time,"How long dos this recipe take to make?\n" %>
     <%= f.number_field :time %>
   </div>
 
   <div class="field">
-    <%= f.label :yield, "How many servings does this recipe make?" %>
+    <%= f.label :yield, "How many servings does this recipe make?\n" %>
     <%= f.text_field :yield %>
   </div>
 
   <div class="field">
-    <%= f.label :ingredients,"What are the ingredients? Please use this format: Amount Ingredient, Amount Ingredient..." %>
+    <%= f.label :ingredients,"What are the ingredients?\nPlease use this format: Amount Ingredient, Amount Ingredient...\n" %>
     <%= f.text_field :ingredients %>
   </div>
 
   <div class="field">
-    <%= f.label :instructions,"What are the instructions for this recipe? Please separate each step a comma" %>
+    <%= f.label :instructions,"What are the instructions for this recipe?\nPlease separate each step a comma\n" %>
     <%= f.text_field :instructions %>
   </div>
 
   <div class="field">
-    <%= f.label :image,"Please paste a link to an image of the recipe here" %>
+    <%= f.label :image,"Please paste a link to an image of the recipe here\n" %>
     <%= f.text_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :link,"If you have found this recipe from another website, please link it here" %>
+    <%= f.label :link,"If you have found this recipe from another website, please link it here\n" %>
     <%= f.text_field :link %>
   </div>
 
