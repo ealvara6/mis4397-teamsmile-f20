@@ -62,6 +62,7 @@
                   <div class="dropdown-menu" aria-labelldby="navbarDropdown">
                     <%= link_to "Account", edit_user_registration_path, :class => "dropdown-item" %>
                     <%= link_to "logout", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
+                    <a class="dropdown-item" href="/recipes/new"> Add a Recipe</a>
                   </div>
                 </div>
               <% else %>
