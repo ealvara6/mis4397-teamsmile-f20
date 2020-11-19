@@ -12,7 +12,20 @@ class RecipesController < ApplicationController
   def show
     @instructions_array = @recipe.instructions.split('.')
     @ingredients_array = @recipe.ingredients.tr('[','').tr(']','').tr("'",'').split(',')
+    @user = User.find(current_user.id)
     
+  end
+  
+  def favorite
+    user = User.find(current_user.id)
+    recipe = Recipe.find(params[:id])
+    user.favorite(recipe)
+  end
+  
+  def unfavorite
+    user = User.find(current_user.id)
+    recipe = Recipe.find(params[:id])
+    user.unfavorite(recipe)
   end
   
   def breakfast

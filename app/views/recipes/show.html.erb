@@ -21,7 +21,14 @@
           </ol>
           <h5 style="display: inline;">Time: </h5><%= @recipe.time %> Minutes<br>
           <h5 style="display: inline;">Yields: </h5><%= @recipe.yield %></br>
-          <a class="btn btn-dark" style="margin-top: 15px;" href="<%= @recipe.link %>" role="button">Link to recipe website</a>
+          <% if @user.favorited?(@recipe) %>
+            <%= link_to "Unfavorite", @recipe, :controller => :recipes, :action => :unfavorite %>
+          <% else %>
+            <%= button_tag(:controller => :recipes, :action => :favorite) do %>
+              favorite
+            <% end %>
+          <% end %>
+          <%= link_to "Link to recipe website", @recipe.link, class: "btn btn-dark", style: "margin-top: 15px;", role: "button"%>
         </td>
       </tr>
     </tbody>
