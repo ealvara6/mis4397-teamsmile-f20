@@ -10,63 +10,69 @@
       </ul>
     </div>
   <% end %>
+<<<<<<< HEAD
 
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control"  %>
+=======
+<div class="container background">
+  <h2>Add a New Recipe</h2>
+  <div class="field">
+    <%= f.label :name, "What is the name of this recipe?" %>
+    <%= f.text_field :name %>
+>>>>>>> 1843f589a35d1bb90780536b912211bce7b14634
   </div>
 
   <div class="field">
-    <%= f.label :types %>
+    <%= f.label :types, "What type of meal does this recipe create? Please choose between Breakfast, Lunch, Dinner, Snack, or Dessert" %>
     <%= f.text_field :types %>
   </div>
 
   <div class="field">
-    <%= f.label :restrictions %>
+    <%= f.label :restrictions,"Are there any dietary restrictions this recipe satisfies?
+    Please type 'XX' for none, 'VT' for vegetarian, 'V' for vegan, 'DF' for dairy free, and 'GF' for gluten free" %>
     <%= f.text_field :restrictions %>
   </div>
 
   <div class="field">
-    <%= f.label :time %>
+    <%= f.label :time,"How long dos this recipe take to make in minutes?" %>
     <%= f.number_field :time %>
   </div>
 
   <div class="field">
-    <%= f.label :yield %>
+    <%= f.label :yield, "How many servings does this recipe produce?" %>
     <%= f.text_field :yield %>
   </div>
 
   <div class="field">
-    <%= f.label :ingredients %>
+    <%= f.label :ingredients,"What are the ingredients?
+    Please use this format: Amount Ingredient, Amount Ingredient..." %>
     <%= f.text_field :ingredients %>
   </div>
 
   <div class="field">
-    <%= f.label :instructions %>
+    <%= f.label :instructions,"What are the instructions for this recipe? Please separate each step with a period." %>
     <%= f.text_field :instructions %>
   </div>
 
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :image,"Please paste a link to an image of the recipe here." %>
     <%= f.text_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :link %>
+    <%= f.label :link,"If you have found this recipe from another website, please link it here." %>
     <%= f.text_field :link %>
   </div>
 
   <div class="field">
-    <%= f.label :make %>
-    <%= f.text_field :make %>
-  </div>
-
-  <div class="field">
-    <%= f.label :make_by %>
-    <%= f.text_field :make_by %>
+    <%= f.label :blurb,"Please add a short story or little blurb about your recipe here." %>
+    <%= f.text_field :blurb %>
   </div>
 
   <div class="actions">
     <%= f.submit "Update Recipe", class: "btn btn-primary" %>
   </div>
 <% end %>
+</div>
