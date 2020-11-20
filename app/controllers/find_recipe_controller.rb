@@ -17,10 +17,12 @@ class FindRecipeController < ApplicationController
         @ingredients_name = ["Dairy", "Vegetables", "Fruits", "Baking", "Sweeteners", "Spices", "Meats", "Fish", "Seafood"]
         @images = ["dairy.png","vegetable.png","fruit.png","baking.png","sugar.png","spice.png","meat.png","fish.png","seafood.png"]
         @restrictions = ["No Restrictions", "Vegetarian", "Vegan", "Dairy Free", "Gluten Free"]
+        @restrictions_values = ["XX", "VT", "V", "DF", "GF"]
     end
     
     
     def show
-         @recipes = Recipe.where("to_tsvector('english',name || ' ') @@ to_tsquery(?)", params[:ingredient])
+        recipes = Recipe.search_restricions(params[:restriction])
+        @recipes = recipes.search_ingredients(params[:ingredient])
     end
 end
