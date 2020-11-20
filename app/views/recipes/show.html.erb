@@ -3,6 +3,17 @@
     <tbody>
       <tr>
         <td colspan="2"><h1><%= @recipe.name %></h1></td>
+          <% if user_signed_in? %>
+            <% if @user.favorited?(@recipe) %>
+              <%= link_to "unfavorite", unfavorite_path(@recipe), method: :get, class: "btn btn-danger", style: "margin-top: 15px;"%>
+            <% else %>
+              <%= link_to "favorite", favorite_path(@recipe), method: :get, class: "btn btn-info", style: "margin-top: 15px;"%>
+            <% end %>
+          <% else %>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login" style= "margin-top: 15px;">
+              Favorite
+            </button>
+          <% end %>
       </tr>
       <tr>
         <td><img src="<%= @recipe.image %>" width="300" height="300"</img></td>
@@ -21,17 +32,7 @@
           </ol>
           <h5 style="display: inline;">Time: </h5><%= @recipe.time %> Minutes<br>
           <h5 style="display: inline;">Yields: </h5><%= @recipe.yield %></br>
-          <% if user_signed_in? %>
-            <% if @user.favorited?(@recipe) %>
-              <%= link_to "unfavorite", unfavorite_path(@recipe), method: :get, class: "btn btn-danger", style: "margin-top: 15px;"%>
-            <% else %>
-              <%= link_to "favorite", favorite_path(@recipe), method: :get, class: "btn btn-primary", style: "margin-top: 15px;"%>
-            <% end %>
-          <% else %>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login" style= "margin-top: 15px;">
-              Favorite
-            </button>
-          <% end %>
+
           <%= link_to "Link to recipe website", @recipe.link, class: "btn btn-dark", style: "margin-top: 15px;", role: "button"%>
         </td>
       </tr>
