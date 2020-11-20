@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'main#index'
+  devise_scope :user do
+    get "users/sign_out" => "devise/sessions#destroy"
+  end
   
   get 'main/index'
+  get "main/favorites", to: "main#favorites", as: "favorites"
+  
 
   get 'contact_us/index'
 
   get 'about_us/index'
 
   resources :recipes
+  get "recipes/:id/favorite", to: "recipes#favorite", as: "favorite"
+  get "recipes/:id/unfavorite", to: "recipes#unfavorite", as: "unfavorite"
+  
   resources :find_recipe
   
   

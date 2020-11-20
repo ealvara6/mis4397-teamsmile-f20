@@ -21,7 +21,18 @@
           </ol>
           <h5 style="display: inline;">Time: </h5><%= @recipe.time %> Minutes<br>
           <h5 style="display: inline;">Yields: </h5><%= @recipe.yield %></br>
-          <a class="btn btn-dark" style="margin-top: 15px;" href="<%= @recipe.link %>" role="button">Link to recipe website</a>
+          <% if user_signed_in? %>
+            <% if @user.favorited?(@recipe) %>
+              <%= link_to "unfavorite", unfavorite_path(@recipe), method: :get, class: "btn btn-danger", style: "margin-top: 15px;"%>
+            <% else %>
+              <%= link_to "favorite", favorite_path(@recipe), method: :get, class: "btn btn-primary", style: "margin-top: 15px;"%>
+            <% end %>
+          <% else %>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login" style= "margin-top: 15px;">
+              Favorite
+            </button>
+          <% end %>
+          <%= link_to "Link to recipe website", @recipe.link, class: "btn btn-dark", style: "margin-top: 15px;", role: "button"%>
         </td>
       </tr>
     </tbody>

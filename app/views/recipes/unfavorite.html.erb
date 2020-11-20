@@ -1,0 +1,34 @@
+<div class="container background">
+  <table class="table">
+    <tbody>
+      <tr>
+        <td colspan="2"><h1><%= @recipe.name %></h1></td>
+      </tr>
+      <tr>
+        <td><img src="<%= @recipe.image %>" width="300" height="300"</img></td>
+        <td>
+          <h3>Ingredients:</h3>
+          <ul>
+          <% @ingredients_array.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+          </ul>
+          <h3>Instructions:</h3>
+          <ol>
+            <% @instructions_array.each do |step| %>
+            <li><%= step %></li>
+            <% end %>
+          </ol>
+          <h5 style="display: inline;">Time: </h5><%= @recipe.time %> Minutes<br>
+          <h5 style="display: inline;">Yields: </h5><%= @recipe.yield %></br>
+          <% if @user.favorited?(@recipe) %>
+            <%= link_to "unfavorite", unfavorite_path(@recipe), method: :get, class: "btn btn-danger", style: "margin-top: 15px;"%>
+          <% else %>
+            <%= link_to "favorite", favorite_path(@recipe), method: :get, class: "btn btn-primary", style: "margin-top: 15px;" %>
+          <% end %>
+          <%= link_to "Link to recipe website", @recipe.link, class: "btn btn-dark", style: "margin-top: 15px;", role: "button"%>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
