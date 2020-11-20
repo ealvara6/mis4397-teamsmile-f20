@@ -23,9 +23,9 @@
           <h5 style="display: inline;">Yields: </h5><%= @recipe.yield %></br>
           <% if user_signed_in? %>
             <% if @user.favorited?(@recipe) %>
-              <%= link_to image_tag(asset_path("unfavorite.png")), unfavorite_path(@recipe), method: :get, style: "margin-top: 15px;"%>
+              <%= link_to image_tag(asset_path("favorite.png")), unfavorite_path(@recipe), method: :get, style: "margin-top: 15px;"%>
             <% else %>
-              <%= link_to image_tag(asset_path("favorite.png")), favorite_path(@recipe), method: :get, style: "margin-top: 15px;"%>
+              <%= link_to image_tag(asset_path("unfavorite.png")), favorite_path(@recipe), method: :get, style: "margin-top: 15px;"%>
             <% end %>
           <% else %>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login" style= "margin-top: 15px;">
