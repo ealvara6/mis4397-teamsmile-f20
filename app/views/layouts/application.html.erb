@@ -58,13 +58,9 @@
                   </a>
                   <div class="dropdown-menu" aria-labelldby="navbarDropdown">
                     <%= link_to "Account", edit_user_registration_path, :class => "dropdown-item" %>
-<<<<<<< HEAD
                     <%= link_to "Favorites", favorites_path, :class => "dropdown-item" %>
-                    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
-=======
-                    <%= link_to "logout", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
-                    <a class="dropdown-item" href="/recipes/new"> New Recipe</a>
->>>>>>> 1843f589a35d1bb90780536b912211bce7b14634
+                    <%= link_to "New Recipe", new_recipe_url, :class => "dropdown-item", :method => "get"%>
+                    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "dropdown-item", :method => ""%> 
                   </div>
                 </div>
               <% else %>
