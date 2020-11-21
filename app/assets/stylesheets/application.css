@@ -55,15 +55,20 @@
 .navbar {
     background-color: #0B7F85ff;
     box-shadow: 1px 1px 20px black;
+    
 }
 
 .nav-item:hover {
   opacity: 0.6;
 
 }
-/*.nav-item:hover {*/
-/*  style: color: red;*/
-/*}*/
+.logo{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+}
 
 .modal-header {
     background-color: #10B3BDff;
