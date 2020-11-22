@@ -28,9 +28,7 @@
               <%= link_to image_tag(asset_path("unfavorite.png")), favorite_path(@recipe), method: :get, style: "margin-top: 15px;"%>
             <% end %>
           <% else %>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login" style= "margin-top: 15px;">
-              Favorite
-            </button>
+            <img src=<%= asset_path("unfavorite.png") %> data-toggle="modal" data-target="#login" style= "margin-top: 15px;">
           <% end %>
           <%= link_to "Link to recipe website", @recipe.link, class: "btn btn-dark", style: "margin-top: 15px;", role: "button"%>
         </td>
