@@ -49,11 +49,11 @@
     padding: 20px;
     border-radius: 15px;
     background-color: #CEF9FBff;
-    box-shadow: 15px 15px 25px black;
+    box-shadow: 15px 15px 25px #053639ff;
 }
 .navbar {
     background-color: #0B7F85ff;
-    box-shadow: 1px 1px 20px black;
+    box-shadow: 1px 1px 20px #053639ff;
 }
 
 /*.nav-item:hover {*/
