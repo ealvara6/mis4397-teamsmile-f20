@@ -1,9 +1,11 @@
 <div class="container background antique-white" style="margin-top: 25px;">
-  <h1 class="text-center">What's In Your Fridge?</h1>
+  <h1 class="text-center" style="color: white;
+    font-family: 'Bodoni MT';
+   text-shadow: 1px 1px 4px #94927f;">What's In Your Fridge?</h1>
   
   <%= form_tag('/find_recipe/query', :method => :get) do %>
   <div class="row">
-    <div class="col text-background" style="margin-top: 0px; margin-bottom: 0px;">
+    <div class="col text-background" style="margin-top: 0px; margin-bottom: 0px; margin-left: 10px;">
       <div class="row">
         <h5>Food Restrictions</h5>
       </div>
