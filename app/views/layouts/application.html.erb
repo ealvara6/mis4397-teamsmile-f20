@@ -19,7 +19,7 @@
     <div class="container-fluid">
        <nav class="row navbar navbar-expand-lg navbar-dark ">
           <a class="navbar-brand" href="/">
-            <img src= <%= asset_path('Logo.png') %> height="45">
+            <img src= <%= asset_path('newlogo.png') %> height="47" width="200" class="logo">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,19 +29,33 @@
               <li class="nav-item">
                 <a class="nav-link text-white" href="/">Home</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="/"id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menu
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/recipes">All Recipes</a>
-                  <a class="dropdown-item" href="/recipes/1000/breakfast">Breakfast</a>
-                  <a class="dropdown-item" href="/recipes/2000/lunch">Lunch</a>
-                  <a class="dropdown-item" href="/recipes/3000/dinner">Dinner</a>
-                  <a class="dropdown-item" href="/recipes/4000/desert">Desert</a>
-                  <a class="dropdown-item" href="/recipes/5000/snack">Snack</a>
+              <li>
+              <div class="dropdown">
+                <!--<button class="dropbtn">Menu</button>-->
+                <a class="droptbtn nav-link dropdown-toggle text-white" href="/"id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+                <div class="dropdown-content">
+                  <a href="/recipes">All Recipes</a>
+                  <a href="/recipes/1000/breakfast">Breakfast</a>
+                  <a href="/recipes/2000/lunch">Lunch</a>
+                  <a  href="/recipes/3000/dinner">Dinner</a>
+                  <a  href="/recipes/4000/desert">Desert</a>
+                  <a  href="/recipes/5000/snack">Snack</a
                 </div>
+              </div>
               </li>
+              <!--<li class="nav-item dropdown">-->
+              <!--  <a class="nav-link dropdown-toggle text-white" href="/"id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+              <!--    Menu-->
+              <!--  </a>-->
+              <!--  <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+              <!--    <a class="dropdown-item" href="/recipes">All Recipes</a>-->
+              <!--    <a class="dropdown-item" href="/recipes/1000/breakfast">Breakfast</a>-->
+              <!--    <a class="dropdown-item" href="/recipes/2000/lunch">Lunch</a>-->
+              <!--    <a class="dropdown-item" href="/recipes/3000/dinner">Dinner</a>-->
+              <!--    <a class="dropdown-item" href="/recipes/4000/desert">Desert</a>-->
+              <!--    <a class="dropdown-item" href="/recipes/5000/snack">Snack</a>-->
+              <!--  </div>-->
+              <!--</li>-->
               <li class="nav-item">
                 <a class="nav-link text-white" href="/find_recipe">Fridge</a>
               </li>

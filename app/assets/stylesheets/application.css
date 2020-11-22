@@ -40,7 +40,8 @@
 }
 
 .brown2 {
-    background-color: #4F3C31ff;
+    /*background-color: #4F3C31ff;*/
+    background-color: white;
 }
 
 .background {
@@ -48,13 +49,68 @@
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 15px;
+<<<<<<< HEAD
     background-color: #CEF9FBff;
     box-shadow: 15px 15px 25px #053639ff;
+=======
+    /*background-color: #FFE8DCff;*/
+    /*background-color: #e6cbbc; dark tan*/
+    /*background-color: #c5f0ea;*/
+    background-color: #afd9db;
+    box-shadow: 15px 15px 25px black;
 }
+/*.container{*/
+    /*box-shadow: 15px 15px 25px black;*/
+/*}*/
+.mainheader{
+    color: white;
+    font-family: 'Bodoni MT';
+   text-shadow: 1px 1px 4px #94927f;
+   /*text-decoration: underline overline dotted #0B7F85ff;*/
+   text-align: center;
+}
+.subtextmain{
+    font-family: 'Bodoni MT';
+    color: #0B7F85ff;
+    text-align: center;
+>>>>>>> 62454bda2cef19de7b8d16703bde82577fa1b7b9
+}
+/*.text-center{*/
+/*    color: white;*/
+/*    font-family: 'Bodoni MT';*/
+/*   text-shadow: 1px 1px 4px #94927f;*/
+/*}*/
 .navbar {
+<<<<<<< HEAD
     background-color: #0B7F85ff;
     box-shadow: 1px 1px 20px #053639ff;
+=======
+    box-shadow: 1px 1px 10px black;
+    background-color:#0B7F85ff;
+    
 }
+.auheader{
+    color: white;
+    font-family: 'Bodoni MT';
+   text-shadow: 1px 1px 4px #94927f;
+   text-align: justify;
+    
+}
+<<<<<<< HEAD
+.nav-item:hover {
+  opacity: 0.6;
+
+}
+.logo{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+    
+>>>>>>> 62454bda2cef19de7b8d16703bde82577fa1b7b9
+}
+=======
 
 /*.nav-item:hover {*/
 /*  opacity: 0.6;*/
@@ -63,6 +119,7 @@
 /*.nav-item:hover {*/
 /*  style: color: red;*/
 /*}*/
+>>>>>>> fdbddf2b3a0e250f95b2ca0bfa0dece393a8cfe5
 
 .modal-header {
     background-color: #10B3BDff;
@@ -77,6 +134,7 @@ footer {
   padding: 3px;
   background-color: #0B7F85ff;
   color: white;
+  box-shadow: 1px 1px 8px black;
 }
 
 .text-background {
@@ -85,4 +143,67 @@ footer {
     padding: 20px;
     border-radius: 15px;
     background-color: white;
+<<<<<<< HEAD
 }
+.card{
+    box-shadow: 2px 4px 10px black;
+}
+
+.droptbtn nav-link dropdown-toggle text-white{
+  color: white;
+  background-color:#0B7F85ff;;
+  color: white;
+  padding: 7px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;opacity: 0.6;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .droptbtn nav-link dropdown-toggle text-white{background-color: #3e8e41; opacity: 0.6;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+}
+>>>>>>> fdbddf2b3a0e250f95b2ca0bfa0dece393a8cfe5
