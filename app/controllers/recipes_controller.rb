@@ -12,8 +12,42 @@ class RecipesController < ApplicationController
   def show
     @instructions_array = @recipe.instructions.split('.')
     @ingredients_array = @recipe.ingredients.tr('[','').tr(']','').tr("'",'').split(',')
-    
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
   end
+  
+  
+  
+  
+  
+  
+  
+  def favorite
+    user = User.find(current_user.id)
+    recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find(params[:id])
+    @instructions_array = recipe.instructions.split('.')
+    @ingredients_array = recipe.ingredients.tr('[','').tr(']','').tr("'",'').split(',')
+    @user = User.find(current_user.id)
+    user.favorite(recipe)
+  end
+  
+  def unfavorite
+    user = User.find(current_user.id)
+    recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find(params[:id])
+    @instructions_array = recipe.instructions.split('.')
+    @ingredients_array = recipe.ingredients.tr('[','').tr(']','').tr("'",'').split(',')
+    @user = User.find(current_user.id)
+    user.unfavorite(recipe)
+  end
+  
+  
+  
+  
+  
+  
   
   def breakfast
     breakfast = []
@@ -65,6 +99,11 @@ class RecipesController < ApplicationController
     end
     @recipes = snack
   end
+  
+  
+  
+  
+  
   
   
   # GET /recipes/new

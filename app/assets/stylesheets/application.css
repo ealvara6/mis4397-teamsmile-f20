@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
 .white {
     background-color: white;
 }
@@ -85,6 +87,7 @@
    text-align: justify;
     
 }
+<<<<<<< HEAD
 .nav-item:hover {
   opacity: 0.6;
 
@@ -97,6 +100,16 @@
     display: block;
     
 }
+=======
+
+/*.nav-item:hover {*/
+/*  opacity: 0.6;*/
+
+/*}*/
+/*.nav-item:hover {*/
+/*  style: color: red;*/
+/*}*/
+>>>>>>> fdbddf2b3a0e250f95b2ca0bfa0dece393a8cfe5
 
 .modal-header {
     background-color: #10B3BDff;
@@ -120,6 +133,7 @@ footer {
     padding: 20px;
     border-radius: 15px;
     background-color: white;
+<<<<<<< HEAD
 }
 .card{
     box-shadow: 2px 4px 10px black;
@@ -180,3 +194,6 @@ footer {
 
 
 
+=======
+}
+>>>>>>> fdbddf2b3a0e250f95b2ca0bfa0dece393a8cfe5

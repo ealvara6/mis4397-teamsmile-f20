@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_favoritor'
+
+gem 'pg_search'
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'

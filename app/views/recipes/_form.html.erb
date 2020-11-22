@@ -11,62 +11,58 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, "What is the name of this recipe?" %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :types %>
-    <%= f.text_field :types %>
+  <div class="form-group">
+    <%= f.label :types, "What type of meal does this recipe create?" %>
+    <%= select_tag(:types, options_for_select([['Breakfast', 'bre'],['Lunch', 'din'], ['Dinner', 'din'], ['Snack', 'sna'], ['dessert', 'des']]), class: "form-control") %>
   </div>
 
-  <div class="field">
-    <%= f.label :restrictions %>
-    <%= f.text_field :restrictions %>
+  <div class="form-group">
+    <%= f.label :restrictions,"Are there any dietary restrictions this recipe satisfies?" %>
+    <%= select_tag(:types, options_for_select([['None', 'XX'],['Vegetarian', 'VT'], ['Vegan', 'V'], ['Dairy Free', 'DF'], ['Gluten Free', 'GF']]), class: "form-control") %>
   </div>
 
-  <div class="field">
-    <%= f.label :time %>
-    <%= f.number_field :time %>
+  <div class="form-group">
+    <%= f.label :time,"How long dos this recipe take to make in minutes?" %>
+    <%= f.number_field :time, class:"form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label :yield %>
-    <%= f.text_field :yield %>
+  <div class="form-group">
+    <%= f.label :yield, "How many servings does this recipe produce?" %>
+    <%= f.text_field :yield, class:"form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label :ingredients %>
-    <%= f.text_field :ingredients %>
+  <div class="form-group">
+    <%= f.label :ingredients,"What are the ingredients?
+    Please use this format: Amount Ingredient, Amount Ingredient..." %>
+    <%= f.text_area :ingredients, class:"form-control", maxlength: "1000", rows: "5" %>
   </div>
 
-  <div class="field">
-    <%= f.label :instructions %>
-    <%= f.text_field :instructions %>
+  <div class="form-group">
+    <%= f.label :instructions,"What are the instructions for this recipe? Please separate each step with a period." %>
+    <%= f.text_area :instructions, class:"form-control", maxlength: "1000", rows: "5" %>
   </div>
 
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.text_field :image %>
+  <div class="form-group">
+    <%= f.label :image,"Please paste a link to an image of the recipe here." %>
+    <%= f.text_field :image, class:"form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label :link %>
-    <%= f.text_field :link %>
+  <div class="form-group">
+    <%= f.label :link,"If you have found this recipe from another website, please link it here." %>
+    <%= f.text_field :link, class:"form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label :make %>
-    <%= f.text_field :make %>
-  </div>
-
-  <div class="field">
-    <%= f.label :make_by %>
-    <%= f.text_field :make_by %>
+  <div class="form-group">
+    <%= f.label :blurb,"Please add a short story or little blurb about your recipe here." %>
+    <%= f.text_area :blurb, class: "form-control", maxlength: "1000", rows: "5"%>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add Recipe", class: "btn btn-info" %>
   </div>
 <% end %>
